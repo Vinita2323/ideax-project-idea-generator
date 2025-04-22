@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+/* Dark theme */
+body {
+    background-color: #000;
+    color: white;
+}
+
+/* light theme */
+body.dark-mode {
+    background-color: white;
+    color: black;
+}
+
+#logo{
+    height: 9.9vh;
+}
+#hoverText , #activeText{
+    display: none;
+}
+
+/* Navbar style */
+.navbar{
+    height: 9.9vh;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: space-between;
+}
+
+.mainDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Apply styles to both child divs inside the main container (mainDiv) */
+.promptDiv , .selector{
+    min-width: 45vh;
+    margin: 3% 20%;
+    padding: 4vh;
+    border: 2px solid black;
+    border-radius: 5vh;
+    font-size: 1.4rem;
+    box-shadow: 0px  0px  40px 15px rgba(255, 255, 255, 0.327);
+}
+
+/* Parent container styles for #dropdown and #types */
+.selector{
+    display: flex;
+    gap: 2vh;
+    justify-content: space-evenly;
+}
+
+/* Dropdown selector styles */
+#dropdown , #types, #difficulty{
+    width: 10vw !important;
+    height: 5vh;
+    font-size: 2.3vh;
+    border-radius: 1vh;
+    border-width: 2px;
+    box-shadow: 0px  0px  40px 15px rgba(255, 255, 255, 0.327);
+}
+
+/* Generate a custom style for the text display */
+#projects{
+    font-size: 1.2rem;
+}
+
+/* Parent class of the button element */
+#btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 6vh;
+    margin-bottom: 0;
+    position: relative;
+}  
+ 
+
+button{
+    padding: 15px;
+    color: black;
+    border-radius: 2vh;
+    align-items:  center;
+    border: 2px solid black;    
+    font-size: 20px;
+    background-color: rgb(0, 255, 170);
+    /* transition: all 0.1s; */
+}
+
+button:hover {
+    color: rgb(0, 255, 170);
+    text-decoration: underline;
+    background-color: rgb(0, 0, 0);
+}
+
+/* Styles for the copy image used for the copy text functionality */
+#copy{
+    /* width: 3.4vh; */
+    right: 0%;
+    top: 40%;
+    height: 3.4vh;
+    cursor: pointer;
+    position: absolute;
+    filter: invert(100%);
+}
+
+/* Display text when hovering over the copy image */
+#copyDiv:hover + #hoverText{
+    display: block;
+    color: gray;
+    position: absolute;
+    right: 0%;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.preloader.animation{
+    height: 20px;
+    margin: 12px 0;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loaderhead{
+    width: 50%;
+}
+
+.preloader.animation::before{
+    content: "";
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    background-position: 450px 400px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right , #d9d9d9 0% , rgba(0,0,0,0.4) 20% , #d9d9d9 40% , #d9d9d9 100% );
+    animation: loadingAnimation 1.5s linear infinite;
+}
+
+@keyframes loadingAnimation {
+    0%{
+        background-position: -450px 0;
+    }
+    100%{
+        background-position: 450px 0;
+    }
+}

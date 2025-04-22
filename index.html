@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="index.css" />
+    <title>Ideax</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <img id="logo" src="./assets/logo.png" alt="" srcset="" />
+      <div id="theme"><img src="./assets/light.png" alt="" /></div>
+    </div>
+    <div class="mainDiv">
+      <div class="selector">
+        <select name="level" id="dropdown">
+          <option value="role" class="options" selected>Select your role</option>
+          <option class="options" value="designer">Graphic Designer</option>
+          <option class="options" value="developer">Developer</option>
+          <!-- <option class="options" value="Employee">Developer</option> -->
+        </select>
+        <select name="type" id="types">
+          <option value="selector" class="options" selected>
+            Select one option
+          </option>
+        </select>
+        <select name="difficulty" id="difficulty">
+          <option value="easy" class="options" selected>
+            Easy
+          </option>
+          <option value="medium" class="options">
+            Medium
+          </option>
+          <option value="hard" class="options">
+            Hard
+          </option>
+        </select>
+      </div>
+      <div class="promptDiv">
+        <div class="loader">
+          <div class="loaderhead preloader"></div>
+          <div class="preloader"></div>
+          <div class="preloader"></div>
+          <div class="preloader"></div>
+        </div>
+        <p id="output">Get ideas to Develop project ❌ skills ✔️</p>
+        <div id="btn">
+          <button id="generate" type="button">Generate</button>
+          <button id="clear" type="button">Clear</button>
+          <div id="copyDiv">
+            <img id="copy" src="./assets/copy-48.png" alt="copy" srcset="" />
+          </div>
+          <div id="hoverText">Copy</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
